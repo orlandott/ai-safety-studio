@@ -163,8 +163,45 @@ body {
   font-weight: 400;
   color: var(--text-muted);
   margin: 0 0 2.5rem;
-  max-width: 36ch;
+  max-width: min(46ch, 100%);
   line-height: 1.55;
+}
+
+.lede strong {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.hero-cta {
+  margin: 0 0 2.75rem;
+  text-align: center;
+}
+
+.hero-cta__btn {
+  display: inline-block;
+  padding: 0.85rem 1.75rem;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #ffffff;
+  background: var(--text);
+  border: 1px solid var(--text);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.hero-cta__btn:hover {
+  opacity: 0.85;
+}
+
+.hero-cta__btn:focus {
+  outline: none;
+}
+
+.hero-cta__btn:focus-visible {
+  box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--text);
 }
 
 .featured-film {
@@ -413,6 +450,13 @@ body {
 .program__lede em {
   font-style: italic;
   color: var(--text);
+}
+
+.program__support {
+  margin: 0 0 1.25rem;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--text-muted);
 }
 
 .program__list {
