@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="AI Safety Studios — microbudget short films about AI risk, with support for scripts, production, and post. Plus a featured film from the Future of Life Institute."
+    />
+    <title>AI Safety Studios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+
+    <header class="top-bar">
+      <a class="top-bar__brand" href="/">
+        <span class="top-bar__mark" aria-hidden="true">◆</span>
+        AI Safety Studios
+      </a>
+      <nav class="top-bar__nav" aria-label="Primary">
+        <a class="top-bar__link" href="/stories.html">Stories we want to see</a>
+      </nav>
+    </header>
+
+    <main class="stage">
+      <p class="eyebrow reveal" data-reveal>Independent film collective</p>
+      <h1 class="title reveal" data-reveal>
+        <span class="title__line">AI Safety</span>
+        <span class="title__line title__line--accent">Studios</span>
+      </h1>
+      <p class="lede reveal" data-reveal>
+        We produce films that communicate the risks of AI safety to the general public.
+      </p>
+
+      <section class="featured-film reveal" data-reveal aria-labelledby="featured-heading">
+        <p class="featured-film__eyebrow" id="featured-heading">
+          When AI meets nuclear command
+        </p>
+        <div class="video-frame">
+          <iframe
+            class="video-frame__embed"
+            src="https://www.youtube.com/embed/w9npWiTOHX0"
+            title="Artificial Escalation — Future of Life Institute"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <p class="featured-film__credit">
+          <a
+            href="https://futureoflife.org/project/artificial-escalation/"
+            rel="noopener noreferrer"
+            >Artificial Escalation</a>
+          — Future of Life Institute (2023). A fictional crisis showing how AI in nuclear systems can accelerate escalation.
+        </p>
+      </section>
+
+      <blockquote class="pullquote reveal" data-reveal>
+        Most people don’t care about AI safety because they can’t imagine all the ways things could go wrong.
+      </blockquote>
+
+      <section class="program reveal" data-reveal aria-labelledby="program-heading">
+        <h2 class="program__title" id="program-heading">Microbudget kill-chain shorts</h2>
+        <p class="program__range">$300 — $5,000</p>
+        <p class="program__lede">
+          We fund and support short films that walk audiences through plausible <em>kill chains</em>: concrete sequences
+          of events where small mistakes, incentives, and automation add up to catastrophe.
+        </p>
+        <ul class="program__list">
+          <li>Script feedback and story clarity</li>
+          <li>Practical ways to reduce cost on set and in post</li>
+          <li>Help finding and vetting collaborators</li>
+          <li>Introductions to post-production talent</li>
+        </ul>
+      </section>
+
+      <div class="cta-row reveal" data-reveal>
+        <span class="film-strip" aria-hidden="true"></span>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>Los Angeles · Earth</p>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
