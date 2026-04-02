@@ -1,14 +1,14 @@
 :root {
-  --bg: #000000;
-  --bg-elevated: #0a0a0a;
-  --text: #ffffff;
-  --text-muted: #a3a3a3;
-  --text-dim: #737373;
-  --accent: #ffffff;
-  --accent-soft: rgba(255, 255, 255, 0.08);
-  --line: rgba(255, 255, 255, 0.12);
-  --line-strong: rgba(255, 255, 255, 0.2);
-  --vignette: rgba(0, 0, 0, 0.5);
+  --bg: #f5f5f3;
+  --bg-elevated: #ffffff;
+  --text: #111111;
+  --text-muted: #4a4a4a;
+  --text-dim: #7a7a7a;
+  --accent: #111111;
+  --accent-soft: rgba(0, 0, 0, 0.04);
+  --line: rgba(0, 0, 0, 0.1);
+  --line-strong: rgba(0, 0, 0, 0.18);
+  --vignette: rgba(0, 0, 0, 0.035);
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-display: var(--font-sans);
   --font-body: var(--font-sans);
@@ -43,8 +43,8 @@ body {
   inset: 0;
   pointer-events: none;
   z-index: 100;
-  opacity: 0.035;
-  mix-blend-mode: overlay;
+  opacity: 0.04;
+  mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
@@ -568,8 +568,8 @@ body {
   height: 3px;
   background: repeating-linear-gradient(
     90deg,
-    rgba(255, 255, 255, 0.35) 0,
-    rgba(255, 255, 255, 0.35) 3px,
+    rgba(0, 0, 0, 0.12) 0,
+    rgba(0, 0, 0, 0.12) 3px,
     transparent 3px,
     transparent 10px
   );
@@ -760,6 +760,155 @@ body {
 .story-card__body em {
   font-style: italic;
   color: var(--text-muted);
+}
+
+.story-card__apply {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line-strong);
+  padding-bottom: 2px;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.story-card__apply:hover {
+  color: var(--text-muted);
+  border-bottom-color: var(--text-muted);
+}
+
+.page--apply {
+  max-width: 38rem;
+}
+
+.apply-form {
+  position: relative;
+  margin: 0 auto 4rem;
+  padding: 0 1.25rem;
+}
+
+.apply-form__fieldset {
+  margin: 0 0 2rem;
+  padding: 0;
+  border: none;
+}
+
+.apply-form__legend {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--text-dim);
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.apply-form__label {
+  display: block;
+  margin: 1rem 0 0.4rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.apply-form__label:first-of-type,
+.apply-form__fieldset > .apply-form__label:first-of-type {
+  margin-top: 0;
+}
+
+.apply-form__input,
+.apply-form__textarea {
+  width: 100%;
+  margin: 0;
+  padding: 0.65rem 0.75rem;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  color: var(--text);
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  border-radius: 0;
+}
+
+.apply-form__input:focus,
+.apply-form__textarea:focus {
+  outline: none;
+  border-color: var(--line-strong);
+}
+
+.apply-form__input[readonly] {
+  color: var(--text-muted);
+  cursor: default;
+}
+
+.apply-form__textarea {
+  resize: vertical;
+  min-height: 6rem;
+  line-height: 1.5;
+}
+
+.apply-form__hint {
+  margin: 0.45rem 0 0;
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: var(--text-dim);
+}
+
+.apply-form__hint a {
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.apply-form__hint a:hover {
+  color: var(--text);
+}
+
+.apply-form__honey {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.apply-form__disclaimer {
+  margin: 0 0 1.5rem;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: var(--text-dim);
+}
+
+.apply-form__disclaimer code {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.apply-form__submit {
+  display: inline-block;
+  margin: 0;
+  padding: 0.85rem 1.75rem;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #ffffff;
+  background: var(--text);
+  border: 1px solid var(--text);
+  cursor: pointer;
+  transition:
+    opacity 0.2s ease,
+    background 0.2s ease;
+}
+
+.apply-form__submit:hover {
+  opacity: 0.85;
 }
 
 .page__outro {

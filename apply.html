@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Apply to direct a microbudget AI safety short with AI Safety Studios—resume, reels, and pitch."
+    />
+    <title>Apply · AI Safety Studios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..700;1,14..32,400..500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+
+    <header class="top-bar">
+      <a class="top-bar__brand" href="./index.html">AI Safety Studios</a>
+      <nav class="top-bar__nav" aria-label="Primary">
+        <a class="top-bar__link" href="./index.html">Films</a>
+        <a class="top-bar__link" href="./stories.html">Stories</a>
+        <span class="top-bar__link top-bar__link--current" aria-current="page">Apply</span>
+      </nav>
+    </header>
+
+    <main class="page page--apply">
+      <header class="page__header reveal" data-reveal>
+        <p class="page__eyebrow">Microbudget program</p>
+        <h1 class="page__title">Apply</h1>
+        <p class="page__intro">
+          Tell us who you are, what you’ve made, and why you’re the right person for this short. We’ll follow up by
+          email. Fields marked <abbr title="required">*</abbr> are required.
+        </p>
+      </header>
+
+      <form
+        class="apply-form reveal"
+        data-reveal
+        action="https://formsubmit.co/hello@aisafetystudios.com"
+        method="POST"
+      >
+        <input type="hidden" name="_subject" id="apply-subject" value="Microgrant application" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="text" name="_honey" class="apply-form__honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+        <fieldset class="apply-form__fieldset">
+          <legend class="apply-form__legend">Concept</legend>
+          <label class="apply-form__label" for="apply-concept-title">Story you’re applying for</label>
+          <input
+            class="apply-form__input"
+            type="text"
+            id="apply-concept-title"
+            name="Concept title"
+            readonly
+            placeholder="(none selected — open pitch)"
+            aria-describedby="apply-concept-help"
+          />
+          <input type="hidden" name="Concept slug" id="apply-concept-slug" value="" />
+          <p class="apply-form__hint" id="apply-concept-help">
+            Pre-filled when you use “Apply to make this short” on a story card. You can also
+            <a href="./stories.html">browse stories</a> and apply from there.
+          </p>
+        </fieldset>
+
+        <fieldset class="apply-form__fieldset">
+          <legend class="apply-form__legend">Contact</legend>
+          <label class="apply-form__label" for="apply-name">Full name <abbr title="required">*</abbr></label>
+          <input class="apply-form__input" type="text" id="apply-name" name="Name" required autocomplete="name" />
+
+          <label class="apply-form__label" for="apply-email">Email <abbr title="required">*</abbr></label>
+          <input
+            class="apply-form__input"
+            type="email"
+            id="apply-email"
+            name="email"
+            required
+            autocomplete="email"
+          />
+        </fieldset>
+
+        <fieldset class="apply-form__fieldset">
+          <legend class="apply-form__legend">Resume &amp; work</legend>
+          <label class="apply-form__label" for="apply-resume">Résumé / CV link <abbr title="required">*</abbr></label>
+          <input
+            class="apply-form__input"
+            type="url"
+            id="apply-resume"
+            name="Resume URL"
+            required
+            placeholder="https://… (Google Drive, Dropbox, portfolio PDF, LinkedIn PDF, etc.)"
+          />
+          <p class="apply-form__hint">Link to a PDF or profile we can read without a login, if possible.</p>
+
+          <label class="apply-form__label" for="apply-reel-primary">Primary reel or sample <abbr title="required">*</abbr></label>
+          <input
+            class="apply-form__input"
+            type="url"
+            id="apply-reel-primary"
+            name="Reel primary URL"
+            required
+            placeholder="https://… (Vimeo, YouTube, etc.)"
+          />
+
+          <label class="apply-form__label" for="apply-reel-secondary">Second sample (optional)</label>
+          <input
+            class="apply-form__input"
+            type="url"
+            id="apply-reel-secondary"
+            name="Reel secondary URL"
+            placeholder="https://…"
+          />
+        </fieldset>
+
+        <fieldset class="apply-form__fieldset">
+          <legend class="apply-form__legend">Your pitch</legend>
+          <label class="apply-form__label" for="apply-why">
+            Why you’re a strong fit for this short <abbr title="required">*</abbr>
+          </label>
+          <textarea
+            class="apply-form__textarea"
+            id="apply-why"
+            name="Why you fit"
+            required
+            rows="6"
+            placeholder="Experience with similar tone, cast/crew you can involve, how you’d shoot under microbudget constraints, how you’d land the defensive ending, etc."
+          ></textarea>
+
+          <label class="apply-form__label" for="apply-experience">Relevant directing / producing experience (optional)</label>
+          <textarea
+            class="apply-form__textarea"
+            id="apply-experience"
+            name="Relevant experience"
+            rows="4"
+            placeholder="Past shorts, festivals, day jobs on set, writing wins—whatever helps us understand your track record."
+          ></textarea>
+
+          <label class="apply-form__label" for="apply-extra">Anything else we should know (optional)</label>
+          <textarea
+            class="apply-form__textarea"
+            id="apply-extra"
+            name="Additional notes"
+            rows="3"
+            placeholder="Locations, cast ideas, schedule constraints, collaboration needs…"
+          ></textarea>
+        </fieldset>
+
+        <p class="apply-form__disclaimer">
+          Submissions go through
+          <a href="https://formsubmit.co" rel="noopener noreferrer">FormSubmit</a> to
+          <strong>hello@aisafetystudios.com</strong>. Replace that address in <code>apply.html</code> if you use a
+          different inbox. First use may require email verification from FormSubmit.
+        </p>
+
+        <button class="apply-form__submit" type="submit">Submit application</button>
+      </form>
+    </main>
+
+    <footer class="footer">
+      <p>Los Angeles · Earth</p>
+    </footer>
+
+    <script type="module" src="./src/apply.js"></script>
+  </body>
+</html>

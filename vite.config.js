@@ -13,6 +13,7 @@ export default defineConfig({
       input: {
         main: path.resolve(__dirname, "index.html"),
         stories: path.resolve(__dirname, "stories.html"),
+        apply: path.resolve(__dirname, "apply.html"),
       },
     },
   },
