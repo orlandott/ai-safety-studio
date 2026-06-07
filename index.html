@@ -3,330 +3,413 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#faf9f6" />
     <meta
       name="description"
-      content="AI Safety Studios — microbudget AI-risk shorts with script feedback, cost-saving help, collaborator vetting, and post introductions. $300–$5,000. Featured: Future of Life Institute film."
+      content="AI Safety Studios — a fictional film collective concept. Microbudget shorts that make AI risk feel real, with grants ($300–$5,000) plus script notes, production help, vetted collaborators, and post-production introductions."
     />
-    <title>AI Safety Studios</title>
+    <title>AI Safety Studios — microbudget films about AI risk</title>
+
+    <!-- Open Graph / social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="AI Safety Studios" />
+    <meta
+      property="og:description"
+      content="Microbudget short films that make AI risk impossible to ignore — then point toward real defenses. (Design mockup.)"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%2318181b'/%3E%3Cg stroke='%23faf9f6' stroke-width='1.6' fill='none'%3E%3Crect x='5' y='6.5' width='14' height='11' rx='2'/%3E%3Cpath d='M9.5 6.5v11M14.5 6.5v11'/%3E%3C/g%3E%3C/svg%3E"
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..700;1,14..32,400..500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..560&family=Inter:wght@300..700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./src/style.css" />
+    <script>
+      try {
+        if (localStorage.getItem("mockupNoticeDismissed") === "1")
+          document.documentElement.classList.add("promo-hidden");
+      } catch (e) {}
+    </script>
   </head>
   <body>
     <div class="grain" aria-hidden="true"></div>
     <div class="vignette" aria-hidden="true"></div>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="top-bar">
-      <a class="top-bar__brand" href="./index.html">AI Safety Studios</a>
-      <nav class="top-bar__nav" aria-label="Primary">
-        <a class="top-bar__link" href="./index.html">Films</a>
-        <a class="top-bar__link" href="./stories.html">Stories we want to see</a>
-        <a class="top-bar__link" href="./apply.html">Apply</a>
-      </nav>
+    <!-- Mockup notice -->
+    <div class="promo" role="note">
+      <p class="promo__text">
+        <span class="promo__badge">Mockup</span>
+        This is a <strong>design concept</strong>, not a real organization — nothing here is a live service or funding offer.
+      </p>
+      <button class="promo__dismiss" type="button" aria-label="Dismiss notice" data-promo-dismiss>&times;</button>
+    </div>
+
+    <header class="site-header" data-header>
+      <div class="site-header__inner">
+        <a class="brand" href="./index.html" aria-label="AI Safety Studios — home">
+          <svg class="brand__mark" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="2.5" y="4.5" width="19" height="15" rx="2.5" stroke="currentColor" stroke-width="1.6" />
+            <path d="M8 4.5v15M16 4.5v15M2.5 9.5H8M16 9.5h5.5M2.5 14.5H8M16 14.5h5.5" stroke="currentColor" stroke-width="1.6" />
+          </svg>
+          <span class="brand__name"><b>AI Safety</b> Studios</span>
+        </a>
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <a class="site-nav__link" href="./index.html" aria-current="page">Films</a>
+          <a class="site-nav__link" href="./stories.html">Stories</a>
+          <a class="site-nav__link" href="#faq">FAQ</a>
+          <a class="btn btn--primary site-nav__cta" href="./apply.html">Apply for a grant</a>
+        </nav>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu" data-nav-toggle>
+          <span class="nav-toggle__box">
+            <span class="nav-toggle__bar"></span>
+            <span class="nav-toggle__bar"></span>
+            <span class="nav-toggle__bar"></span>
+          </span>
+        </button>
+      </div>
     </header>
 
-    <main class="stage">
-      <p class="eyebrow reveal" data-reveal>Independent film collective</p>
-      <h1 class="title reveal" data-reveal>
-        <span class="title__line">AI Safety</span>
-        <span class="title__line title__line--accent">Studios</span>
-      </h1>
-      <p class="lede reveal" data-reveal>
-        We produce films that communicate the risks of AI safety to the general public. Alongside microgrants
-        ($300–$5,000), we provide <strong>script feedback</strong> and story notes,
-        <strong>practical ways to reduce cost</strong> on set and in post, help
-        <strong>finding and vetting collaborators</strong>, and <strong>introductions to post-production</strong> talent
-        so your short can actually get finished.
-      </p>
-      <p class="hero-cta reveal" data-reveal>
-        <a class="hero-cta__btn" href="./stories.html">Stories we want to see</a>
-      </p>
-
-      <section class="featured-film reveal" data-reveal aria-labelledby="featured-heading">
-        <p class="featured-film__eyebrow" id="featured-heading">
-          When AI meets nuclear command
-        </p>
-        <div class="video-frame">
-          <iframe
-            class="video-frame__embed"
-            src="https://www.youtube.com/embed/w9npWiTOHX0"
-            title="Artificial Escalation — Future of Life Institute"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
+    <main id="main">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero__inner">
+            <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot"></span> Independent film collective</p>
+            <h1 class="hero__title reveal" data-reveal>
+              Make AI risk <em>impossible&nbsp;to&nbsp;ignore.</em>
+            </h1>
+            <p class="hero__lede reveal" data-reveal>
+              We fund and support microbudget short films that turn abstract AI dangers into concrete, human
+              stories — then point audiences toward real defenses.
+            </p>
+            <div class="hero__actions reveal" data-reveal>
+              <a class="btn btn--primary btn--lg" href="./apply.html">Apply for a grant <span class="btn__arrow" aria-hidden="true">→</span></a>
+              <a class="btn btn--ghost btn--lg" href="./stories.html">Browse 30 story ideas</a>
+            </div>
+            <dl class="specs reveal" data-reveal>
+              <div class="specs__item"><dt>Grants</dt><dd>$300&nbsp;–&nbsp;$5,000</dd></div>
+              <div class="specs__item"><dt>Runtime</dt><dd>Under 5 min</dd></div>
+              <div class="specs__item"><dt>Support</dt><dd>Notes · crew · post</dd></div>
+            </dl>
+          </div>
         </div>
-        <p class="featured-film__credit">
-          <a
-            href="https://futureoflife.org/project/artificial-escalation/"
-            rel="noopener noreferrer"
-            >Artificial Escalation</a>
-          — Future of Life Institute (2023). A fictional crisis showing how AI in nuclear systems can accelerate escalation.
-        </p>
       </section>
 
-      <section class="slate reveal" data-reveal aria-labelledby="stills-heading">
-        <div class="slate__intro">
-          <p class="slate__eyebrow">In development</p>
-          <h2 class="slate__headline" id="stills-heading">From the slate</h2>
-          <p class="slate__lede">
-            Reference stills for tone—futures, infrastructure, and systems (not a claim of finished VFX). Stock via
-            Unsplash; shipped films shoot original footage.
+      <!-- Featured film -->
+      <section class="section section--alt" aria-labelledby="featured-title">
+        <div class="container">
+          <div class="section__head reveal" data-reveal>
+            <p class="eyebrow"><span class="eyebrow__dot"></span> Featured film</p>
+            <h2 class="section__title" id="featured-title">When AI meets nuclear command</h2>
+            <p class="section__lede">
+              A fictional crisis showing how AI woven into nuclear systems can accelerate escalation — exactly the
+              kind of vivid, plausible scenario we exist to put on screen.
+            </p>
+          </div>
+          <figure class="featured__media reveal" data-reveal>
+            <div class="video">
+              <iframe
+                src="https://www.youtube.com/embed/w9npWiTOHX0"
+                title="Artificial Escalation — Future of Life Institute"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+            <figcaption class="featured__credit">
+              <a href="https://futureoflife.org/project/artificial-escalation/" rel="noopener noreferrer">Artificial Escalation</a>
+              — Future of Life Institute, 2023. Shown as a reference for tone; not produced by AI Safety Studios.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- What we offer -->
+      <section class="section" aria-labelledby="offer-title">
+        <div class="container">
+          <div class="section__head reveal" data-reveal>
+            <p class="eyebrow"><span class="eyebrow__dot"></span> More than a check</p>
+            <h2 class="section__title" id="offer-title">We back the film all the way to release</h2>
+            <p class="section__lede">
+              A microgrant is just the start. Selected filmmakers get hands-on support from first draft to final mix.
+            </p>
+          </div>
+          <div class="offer__grid">
+            <article class="feature reveal" data-reveal>
+              <span class="feature__num">01</span>
+              <h3 class="feature__title">Script &amp; story notes</h3>
+              <p class="feature__body">Detailed feedback on drafts and outlines to sharpen clarity, tension, and a credible defensive ending.</p>
+            </article>
+            <article class="feature reveal" data-reveal>
+              <span class="feature__num">02</span>
+              <h3 class="feature__title">Cost-saving production help</h3>
+              <p class="feature__body">Concrete ways to keep the shoot inside a microbudget — lean schedules, daylight exteriors, smart workarounds.</p>
+            </article>
+            <article class="feature reveal" data-reveal>
+              <span class="feature__num">03</span>
+              <h3 class="feature__title">Vetted collaborators</h3>
+              <p class="feature__body">Introductions to crew and specialists we trust when you need to round out your team.</p>
+            </article>
+            <article class="feature reveal" data-reveal>
+              <span class="feature__num">04</span>
+              <h3 class="feature__title">Post-production intros</h3>
+              <p class="feature__body">Paths to post houses and freelancers for edit, color, and sound so your short actually gets finished.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section class="section section--alt" aria-labelledby="process-title">
+        <div class="container">
+          <div class="section__head reveal" data-reveal>
+            <p class="eyebrow"><span class="eyebrow__dot"></span> How it works</p>
+            <h2 class="section__title" id="process-title">From pitch to premiere</h2>
+            <p class="section__lede">
+              A simple path, with funding released in two parts so you can shoot now and finish strong.
+            </p>
+          </div>
+          <ol class="steps">
+            <li class="step reveal" data-reveal>
+              <span class="step__num">1</span>
+              <h3 class="step__title">Apply</h3>
+              <p class="step__body">Pitch an original short or claim one of our 30 concepts. Tell us how you'd shoot it lean.</p>
+            </li>
+            <li class="step reveal" data-reveal>
+              <span class="step__num">2</span>
+              <h3 class="step__title">Notes &amp; greenlight</h3>
+              <p class="step__body">We give story feedback and, once it's green-lit, send a first installment so you can gear up.</p>
+            </li>
+            <li class="step reveal" data-reveal>
+              <span class="step__num">3</span>
+              <h3 class="step__title">Shoot lean</h3>
+              <p class="step__body">Small crew, tight schedule. We help with collaborators and keeping costs in check.</p>
+            </li>
+            <li class="step reveal" data-reveal>
+              <span class="step__num">4</span>
+              <h3 class="step__title">Finish &amp; release</h3>
+              <p class="step__body">Post-production intros help you finish; we release the remainder on delivery.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- The slate -->
+      <section class="section" aria-labelledby="slate-title">
+        <div class="container">
+          <div class="section__head section__head--center reveal" data-reveal>
+            <p class="eyebrow"><span class="eyebrow__dot"></span> In development</p>
+            <h2 class="section__title" id="slate-title">From the slate</h2>
+            <p class="section__lede">
+              Reference stills for tone — futures, infrastructure, and systems under strain. Not finished VFX; shipped
+              films shoot original footage.
+            </p>
+          </div>
+          <div class="poster-grid reveal" data-reveal>
+            <article class="poster poster--feature">
+              <figure class="poster__figure">
+                <img class="poster__img" src="https://images.unsplash.com/photo-1773278190465-8d009ce315a7?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Vibrant cityscape at night with glowing lights" width="1200" height="675" loading="lazy" decoding="async" />
+                <figcaption class="poster__caption"><span class="poster__tag">Infrastructure</span><span class="poster__title">Gridlock</span></figcaption>
+              </figure>
+            </article>
+            <article class="poster poster--portrait">
+              <figure class="poster__figure">
+                <img class="poster__img" src="https://images.unsplash.com/photo-1763198216782-b534fea3dcf1?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Futuristic structures in a desolate snowy landscape" width="800" height="1000" loading="lazy" decoding="async" />
+                <figcaption class="poster__caption"><span class="poster__tag">Alignment</span><span class="poster__title">The Peacekeeper</span></figcaption>
+              </figure>
+            </article>
+            <article class="poster poster--landscape">
+              <figure class="poster__figure">
+                <img class="poster__img" src="https://images.unsplash.com/photo-1660251146550-40e7c9d841b3?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Desert landscape at sunset" width="900" height="600" loading="lazy" decoding="async" />
+                <figcaption class="poster__caption"><span class="poster__tag">Infrastructure</span><span class="poster__title">The Logistics Ghost</span></figcaption>
+              </figure>
+            </article>
+            <article class="poster poster--portrait">
+              <figure class="poster__figure">
+                <img class="poster__img" src="https://images.unsplash.com/photo-1770663629652-0415100466c4?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Figure in a sparse landscape with distant modern towers" width="800" height="1000" loading="lazy" decoding="async" />
+                <figcaption class="poster__caption"><span class="poster__tag">Biological</span><span class="poster__title">The Silent Antigen</span></figcaption>
+              </figure>
+            </article>
+            <article class="poster poster--landscape">
+              <figure class="poster__figure">
+                <img class="poster__img" src="https://images.unsplash.com/photo-1763198217110-07b5350aa179?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Lone figure walking toward surreal rocky mountains" width="900" height="600" loading="lazy" decoding="async" />
+                <figcaption class="poster__caption"><span class="poster__tag">Alignment</span><span class="poster__title">Priority One</span></figcaption>
+              </figure>
+            </article>
+            <article class="poster poster--landscape">
+              <figure class="poster__figure">
+                <img class="poster__img" src="https://images.unsplash.com/photo-1774646598677-cc38cb3cac00?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Abstract blue topographic map with glowing lines" width="900" height="600" loading="lazy" decoding="async" />
+                <figcaption class="poster__caption"><span class="poster__tag">Cyber</span><span class="poster__title">Epistemic Decay</span></figcaption>
+              </figure>
+            </article>
+            <article class="poster poster--landscape">
+              <figure class="poster__figure">
+                <img class="poster__img" src="https://images.unsplash.com/photo-1680992046615-065f58bcb4d8?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Close-up of server racks in low light" width="900" height="600" loading="lazy" decoding="async" />
+                <figcaption class="poster__caption"><span class="poster__tag">Alignment</span><span class="poster__title">Thermal Equilibrium</span></figcaption>
+              </figure>
+            </article>
+            <article class="poster poster--landscape">
+              <figure class="poster__figure">
+                <img class="poster__img" src="https://images.unsplash.com/photo-1773966071293-bea3d7646fd1?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Laptop screen with code in a dark room" width="900" height="600" loading="lazy" decoding="async" />
+                <figcaption class="poster__caption"><span class="poster__tag">Economic</span><span class="poster__title">Flash Crash 2.0</span></figcaption>
+              </figure>
+            </article>
+            <article class="poster poster--landscape">
+              <figure class="poster__figure">
+                <img class="poster__img" src="https://images.unsplash.com/photo-1652081210002-a24d405e2d24?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Microscope in a laboratory" width="900" height="600" loading="lazy" decoding="async" />
+                <figcaption class="poster__caption"><span class="poster__tag">Biological</span><span class="poster__title">The Optimization Loop</span></figcaption>
+              </figure>
+            </article>
+            <article class="poster poster--landscape">
+              <figure class="poster__figure">
+                <img class="poster__img" src="https://images.unsplash.com/photo-1773767797729-f3ae24353399?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Security camera on a wall" width="900" height="600" loading="lazy" decoding="async" />
+                <figcaption class="poster__caption"><span class="poster__tag">Cognitive</span><span class="poster__title">Consensus Factory</span></figcaption>
+              </figure>
+            </article>
+          </div>
+          <p class="slate__credit reveal" data-reveal>
+            Photos via <a href="https://unsplash.com" rel="noopener noreferrer">Unsplash</a> (stock reference).
           </p>
         </div>
-        <div class="poster-grid">
-          <article class="poster poster--feature">
-            <figure class="poster__figure">
-              <img
-                class="poster__img"
-                src="https://images.unsplash.com/photo-1773278190465-8d009ce315a7?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
-                alt="Vibrant cityscape at night with glowing lights"
-                width="1200"
-                height="675"
-                loading="eager"
-                decoding="async"
-              />
-              <figcaption class="poster__caption">
-                <span class="poster__year">In development</span>
-                <span class="poster__title">Gridlock</span>
-              </figcaption>
-            </figure>
-          </article>
-          <article class="poster poster--portrait">
-            <figure class="poster__figure">
-              <img
-                class="poster__img"
-                src="https://images.unsplash.com/photo-1763198216782-b534fea3dcf1?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
-                alt="Futuristic structures in a desolate snowy landscape"
-                width="800"
-                height="1000"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption class="poster__caption">
-                <span class="poster__year">In development</span>
-                <span class="poster__title">The Peacekeeper</span>
-              </figcaption>
-            </figure>
-          </article>
-          <article class="poster poster--landscape">
-            <figure class="poster__figure">
-              <img
-                class="poster__img"
-                src="https://images.unsplash.com/photo-1660251146550-40e7c9d841b3?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
-                alt="Desert landscape at sunset"
-                width="900"
-                height="600"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption class="poster__caption">
-                <span class="poster__year">In development</span>
-                <span class="poster__title">The Logistics Ghost</span>
-              </figcaption>
-            </figure>
-          </article>
-          <article class="poster poster--portrait">
-            <figure class="poster__figure">
-              <img
-                class="poster__img"
-                src="https://images.unsplash.com/photo-1770663629652-0415100466c4?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
-                alt="Figure in a sparse landscape with distant modern towers"
-                width="800"
-                height="1000"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption class="poster__caption">
-                <span class="poster__year">In development</span>
-                <span class="poster__title">The Silent Antigen</span>
-              </figcaption>
-            </figure>
-          </article>
-          <article class="poster poster--landscape">
-            <figure class="poster__figure">
-              <img
-                class="poster__img"
-                src="https://images.unsplash.com/photo-1763198217110-07b5350aa179?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
-                alt="Lone figure walking toward surreal rocky mountains"
-                width="900"
-                height="600"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption class="poster__caption">
-                <span class="poster__year">In development</span>
-                <span class="poster__title">Priority One</span>
-              </figcaption>
-            </figure>
-          </article>
-          <article class="poster poster--landscape">
-            <figure class="poster__figure">
-              <img
-                class="poster__img"
-                src="https://images.unsplash.com/photo-1774646598677-cc38cb3cac00?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
-                alt="Abstract blue topographic map with glowing lines"
-                width="900"
-                height="600"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption class="poster__caption">
-                <span class="poster__year">In development</span>
-                <span class="poster__title">Epistemic Decay</span>
-              </figcaption>
-            </figure>
-          </article>
-          <article class="poster poster--landscape">
-            <figure class="poster__figure">
-              <img
-                class="poster__img"
-                src="https://images.unsplash.com/photo-1680992046615-065f58bcb4d8?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
-                alt="Close-up of server racks in low light"
-                width="900"
-                height="600"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption class="poster__caption">
-                <span class="poster__year">In development</span>
-                <span class="poster__title">Thermal Equilibrium</span>
-              </figcaption>
-            </figure>
-          </article>
-          <article class="poster poster--landscape">
-            <figure class="poster__figure">
-              <img
-                class="poster__img"
-                src="https://images.unsplash.com/photo-1773966071293-bea3d7646fd1?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
-                alt="Laptop screen with code in a dark room"
-                width="900"
-                height="600"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption class="poster__caption">
-                <span class="poster__year">In development</span>
-                <span class="poster__title">Flash Crash 2.0</span>
-              </figcaption>
-            </figure>
-          </article>
-          <article class="poster poster--landscape">
-            <figure class="poster__figure">
-              <img
-                class="poster__img"
-                src="https://images.unsplash.com/photo-1652081210002-a24d405e2d24?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
-                alt="Microscope in a laboratory"
-                width="900"
-                height="600"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption class="poster__caption">
-                <span class="poster__year">In development</span>
-                <span class="poster__title">The Optimization Loop</span>
-              </figcaption>
-            </figure>
-          </article>
-          <article class="poster poster--landscape">
-            <figure class="poster__figure">
-              <img
-                class="poster__img"
-                src="https://images.unsplash.com/photo-1773767797729-f3ae24353399?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
-                alt="Security camera on a wall"
-                width="900"
-                height="600"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption class="poster__caption">
-                <span class="poster__year">In development</span>
-                <span class="poster__title">Consensus Factory</span>
-              </figcaption>
-            </figure>
-          </article>
-        </div>
-        <p class="slate__credit">
-          Photos via <a href="https://unsplash.com" rel="noopener noreferrer">Unsplash</a> (stock reference).
-        </p>
       </section>
 
-      <blockquote class="pullquote reveal" data-reveal>
-        Most people don’t care about AI safety because they can’t imagine all the ways things could go wrong.
-      </blockquote>
-
-      <section class="program reveal" data-reveal aria-labelledby="program-heading">
-        <h2 class="program__title" id="program-heading">Microbudget kill-chain shorts</h2>
-        <p class="program__range">$300 — $5,000</p>
-        <p class="program__lede">
-          We fund and support short films that walk audiences through plausible <em>kill chains</em>: concrete sequences
-          of events where small mistakes, incentives, and automation add up to catastrophe.
-        </p>
-        <p class="program__support">
-          We’re not only a check—we stay in your corner with structured support: notes on draft scripts and outlines,
-          concrete ideas to keep the shoot inside the budget, introductions to people we’ve vetted when you need crew or
-          specialists, and paths to post houses or freelancers when you’re ready to finish and sound-mix.
-        </p>
-        <ul class="program__list">
-          <li>Script feedback and story clarity</li>
-          <li>Practical ways to reduce cost on set and in post</li>
-          <li>Help finding and vetting collaborators</li>
-          <li>Introductions to post-production talent</li>
-        </ul>
-      </section>
-
-      <section class="faq reveal" data-reveal aria-labelledby="faq-heading">
-        <h2 class="faq__title" id="faq-heading">FAQ</h2>
-        <div class="faq__list">
-          <details class="faq__item">
-            <summary class="faq__question">How does payment work?</summary>
-            <div class="faq__answer">
-              <p>
-                We usually pay in <strong>two parts</strong>: a <strong>first installment up front</strong> when your
-                project is green-lit—so you can rent gear, lock locations, and shoot. When the film is finished and we’ve
-                signed off on delivery, we release the <strong>remainder</strong>. For talent, we often
-                <strong>pay actors directly</strong> out of that closing tranche (and can do the same for other roles we
-                agree on in writing) so people are paid cleanly at the end. Exact splits depend on budget tier and your
-                line items.
-              </p>
-            </div>
-          </details>
-          <details class="faq__item">
-            <summary class="faq__question">Why microbudget? How do you shoot so cheap?</summary>
-            <div class="faq__answer">
-              <p>
-                The grant is built for <strong>small crews and lean schedules</strong>. We plan around
-                <strong>locations outside</strong> and <strong>daytime</strong> as much as possible—natural light and
-                simple exteriors keep lighting, power, and location costs down compared with studio sets or heavy night
-                work. We’ll still help you cheat interiors when the story needs them; we just don’t assume them by
-                default.
-              </p>
-            </div>
-          </details>
-          <details class="faq__item">
-            <summary class="faq__question">How long should the short be?</summary>
-            <div class="faq__answer">
-              <p>
-                Finished films should run <strong>under five minutes</strong> (including credits unless we agree
-                otherwise). Tighter runtimes are easier to finish on a microbudget and tend to perform better when people
-                are scrolling.
-              </p>
-            </div>
-          </details>
+      <!-- Quote -->
+      <section class="quote section--alt">
+        <div class="container">
+          <blockquote class="quote__text reveal" data-reveal>
+            Most people don't care about AI safety because they can't imagine all the ways it could go wrong.
+          </blockquote>
+          <p class="quote__cite reveal" data-reveal>— The premise behind every film we fund</p>
         </div>
       </section>
 
-      <div class="cta-row reveal" data-reveal>
-        <span class="film-strip" aria-hidden="true"></span>
-      </div>
+      <!-- FAQ -->
+      <section class="section" id="faq" aria-labelledby="faq-title">
+        <div class="container">
+          <div class="section__head section__head--center reveal" data-reveal>
+            <p class="eyebrow"><span class="eyebrow__dot"></span> Questions</p>
+            <h2 class="section__title" id="faq-title">Frequently asked</h2>
+          </div>
+          <div class="faq__list reveal" data-reveal style="margin-inline:auto">
+            <details class="faq__item">
+              <summary class="faq__question">How does payment work? <span class="faq__icon" aria-hidden="true"></span></summary>
+              <div class="faq__answer">
+                <p>
+                  We usually pay in <strong>two parts</strong>: a <strong>first installment up front</strong> when your
+                  project is green-lit — so you can rent gear, lock locations, and shoot. When the film is finished and
+                  we've signed off on delivery, we release the <strong>remainder</strong>. For talent, we often
+                  <strong>pay actors directly</strong> out of that closing tranche. Exact splits depend on budget tier
+                  and your line items.
+                </p>
+              </div>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">Why microbudget? How do you shoot so cheap? <span class="faq__icon" aria-hidden="true"></span></summary>
+              <div class="faq__answer">
+                <p>
+                  The grant is built for <strong>small crews and lean schedules</strong>. We plan around
+                  <strong>exterior locations</strong> and <strong>daylight</strong> as much as possible — natural light
+                  and simple exteriors keep lighting, power, and location costs down versus studio sets or heavy night
+                  work. We'll still help you cheat interiors when the story needs them.
+                </p>
+              </div>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">How long should the short be? <span class="faq__icon" aria-hidden="true"></span></summary>
+              <div class="faq__answer">
+                <p>
+                  Finished films should run <strong>under five minutes</strong> (including credits unless we agree
+                  otherwise). Tighter runtimes are easier to finish on a microbudget and tend to perform better when
+                  people are scrolling.
+                </p>
+              </div>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">Is AI Safety Studios a real organization? <span class="faq__icon" aria-hidden="true"></span></summary>
+              <div class="faq__answer">
+                <p>
+                  <strong>No — this site is a design mockup.</strong> AI Safety Studios is a fictional concept used to
+                  demonstrate a website design. There is no real grant program, the application form is illustrative,
+                  and nothing here should be treated as a genuine funding offer.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA band -->
+      <section class="cta-band" aria-labelledby="cta-title">
+        <div class="cta-band__inner reveal" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__dot"></span> Get involved</p>
+          <h2 class="cta-band__title" id="cta-title">Have a story that makes AI risk real?</h2>
+          <p class="cta-band__text">
+            Pitch an original short or claim one of our 30 concepts. Grants from $300 to $5,000, plus support all the
+            way to the finish line.
+          </p>
+          <div class="cta-band__actions">
+            <a class="btn btn--invert btn--lg" href="./apply.html">Apply for a grant <span class="btn__arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn--ghost-invert btn--lg" href="./stories.html">See the stories</a>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer class="footer">
-      <p>Los Angeles · Earth</p>
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div>
+          <a class="brand" href="./index.html" aria-label="AI Safety Studios — home">
+            <svg class="brand__mark" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="2.5" y="4.5" width="19" height="15" rx="2.5" stroke="currentColor" stroke-width="1.6" />
+              <path d="M8 4.5v15M16 4.5v15M2.5 9.5H8M16 9.5h5.5M2.5 14.5H8M16 14.5h5.5" stroke="currentColor" stroke-width="1.6" />
+            </svg>
+            <span class="brand__name"><b>AI Safety</b> Studios</span>
+          </a>
+          <p class="site-footer__tagline">Microbudget films that make AI risk feel real — and point toward defenses.</p>
+        </div>
+        <nav class="footer-col" aria-label="Explore">
+          <h2 class="footer-col__title">Explore</h2>
+          <ul class="footer-col__list">
+            <li><a href="./index.html">Films</a></li>
+            <li><a href="./stories.html">Stories we want to see</a></li>
+            <li><a href="./apply.html">Apply</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </nav>
+        <div class="footer-col">
+          <h2 class="footer-col__title">Program</h2>
+          <ul class="footer-col__list">
+            <li><span>Grants $300–$5,000</span></li>
+            <li><span>Script &amp; story notes</span></li>
+            <li><span>Vetted collaborators</span></li>
+            <li><span>Post-production intros</span></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-col__title">Contact</h2>
+          <ul class="footer-col__list">
+            <li><a href="mailto:hello@aisafetystudios.com">hello@aisafetystudios.com</a></li>
+            <li><span>Los Angeles · Earth</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__base">
+        <div class="site-footer__base-inner">
+          <p class="site-footer__mockup">
+            <span class="dot" aria-hidden="true"></span> Mockup — a non-functional design concept, not affiliated with any real organization.
+          </p>
+          <p class="site-footer__copy">© <span data-year>2026</span> AI Safety Studios (fictional). Reference stills via Unsplash.</p>
+        </div>
+      </div>
     </footer>
 
     <script type="module" src="./src/main.js"></script>
