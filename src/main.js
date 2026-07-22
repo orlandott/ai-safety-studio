@@ -1,9 +1,7 @@
 /* AI Safety Studios — shared site behavior
    Loaded on every page (apply.js imports this module). */
 
-const prefersReducedMotion = window.matchMedia(
-  "(prefers-reduced-motion: reduce)"
-).matches;
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 /* ---- Reveal on scroll ---------------------------------------------------- */
 function initReveal() {
@@ -30,7 +28,7 @@ function initReveal() {
         obs.unobserve(el);
       });
     },
-    { rootMargin: "0px 0px -8% 0px", threshold: 0.08 }
+    { rootMargin: "0px 0px -8% 0px", threshold: 0.08 },
   );
 
   items.forEach((el) => observer.observe(el));

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -12,19 +12,25 @@
 
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Apply · AI Safety Studios" />
-    <meta property="og:description" content="Apply to the AI Safety Studios microgrant concept. (Design mockup.)" />
+    <meta
+      property="og:description"
+      content="Apply to the AI Safety Studios microgrant concept. (Design mockup.)"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:image" content="./og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="AI Safety Studios (design mockup)" />
+    <meta name="twitter:image" content="./og.png" />
 
     <link
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%2318181b'/%3E%3Cg stroke='%23faf9f6' stroke-width='1.6' fill='none'%3E%3Crect x='5' y='6.5' width='14' height='11' rx='2'/%3E%3Cpath d='M9.5 6.5v11M14.5 6.5v11'/%3E%3C/g%3E%3C/svg%3E"
+      type="image/svg+xml"
     />
+    <link rel="icon" type="image/png" sizes="512x512" href="./favicon-512.png" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..560&family=Inter:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="./src/style.css" />
     <script>
       try {
@@ -41,17 +47,32 @@
     <div class="promo" role="note">
       <p class="promo__text">
         <span class="promo__badge">Mockup</span>
-        This is a <strong>design concept</strong>, not a real organization — this form is illustrative and isn't a live funding offer.
+        This is a <strong>design concept</strong>, not a real organization — this form is
+        illustrative and isn't a live funding offer.
       </p>
-      <button class="promo__dismiss" type="button" aria-label="Dismiss notice" data-promo-dismiss>&times;</button>
+      <button class="promo__dismiss" type="button" aria-label="Dismiss notice" data-promo-dismiss>
+        &times;
+      </button>
     </div>
 
     <header class="site-header" data-header>
       <div class="site-header__inner">
         <a class="brand" href="./index.html" aria-label="AI Safety Studios — home">
           <svg class="brand__mark" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <rect x="2.5" y="4.5" width="19" height="15" rx="2.5" stroke="currentColor" stroke-width="1.6" />
-            <path d="M8 4.5v15M16 4.5v15M2.5 9.5H8M16 9.5h5.5M2.5 14.5H8M16 14.5h5.5" stroke="currentColor" stroke-width="1.6" />
+            <rect
+              x="2.5"
+              y="4.5"
+              width="19"
+              height="15"
+              rx="2.5"
+              stroke="currentColor"
+              stroke-width="1.6"
+            />
+            <path
+              d="M8 4.5v15M16 4.5v15M2.5 9.5H8M16 9.5h5.5M2.5 14.5H8M16 14.5h5.5"
+              stroke="currentColor"
+              stroke-width="1.6"
+            />
           </svg>
           <span class="brand__name"><b>AI Safety</b> Studios</span>
         </a>
@@ -59,9 +80,18 @@
           <a class="site-nav__link" href="./index.html">Films</a>
           <a class="site-nav__link" href="./stories.html">Stories</a>
           <a class="site-nav__link" href="./index.html#faq">FAQ</a>
-          <a class="btn btn--primary site-nav__cta" href="./apply.html" aria-current="page">Apply for a grant</a>
+          <a class="btn btn--primary site-nav__cta" href="./apply.html" aria-current="page"
+            >Apply for a grant</a
+          >
         </nav>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu" data-nav-toggle>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Toggle menu"
+          data-nav-toggle
+        >
           <span class="nav-toggle__box">
             <span class="nav-toggle__bar"></span>
             <span class="nav-toggle__bar"></span>
@@ -75,33 +105,29 @@
       <section class="page-hero">
         <div class="container">
           <div class="page-hero__inner">
-            <p class="eyebrow reveal" data-reveal><span class="eyebrow__dot"></span> Microbudget program</p>
+            <p class="eyebrow reveal" data-reveal>
+              <span class="eyebrow__dot"></span> Microbudget program
+            </p>
             <h1 class="page-hero__title reveal" data-reveal>Apply</h1>
             <p class="page-hero__intro reveal" data-reveal>
-              Selected filmmakers get more than funding. Tell us who you are, what you've made, and why you're the right
-              person for this short — we'll follow up by email. Fields marked <abbr title="required">*</abbr> are required.
+              Selected filmmakers get more than funding. Tell us who you are, what you've made, and
+              why you're the right person for this short — we'll follow up by email. Fields marked
+              <abbr title="required">*</abbr> are required.
             </p>
           </div>
         </div>
       </section>
 
-      <div class="container" style="padding-bottom: clamp(3rem, 7vw, 5rem)">
+      <div class="container container--apply">
         <div class="apply-layout">
           <div class="apply-main">
-            <form
-              class="apply-form reveal"
-              data-reveal
-              action="https://formsubmit.co/hello@aisafetystudios.com"
-              method="POST"
-            >
-              <input type="hidden" name="_subject" id="apply-subject" value="Microgrant application" />
-              <input type="hidden" name="_template" value="table" />
-              <input type="text" name="_honey" class="apply-form__honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
-
+            <form class="apply-form reveal" data-reveal action="./thanks.html" method="get">
               <fieldset class="apply-form__fieldset">
                 <legend class="apply-form__legend" data-step="1">Concept</legend>
                 <div class="field">
-                  <label class="apply-form__label" for="apply-concept-title">Story you're applying for</label>
+                  <label class="apply-form__label" for="apply-concept-title"
+                    >Story you're applying for</label
+                  >
                   <input
                     class="apply-form__input"
                     type="text"
@@ -113,7 +139,8 @@
                   />
                   <input type="hidden" name="Concept slug" id="apply-concept-slug" value="" />
                   <p class="apply-form__hint" id="apply-concept-help">
-                    Pre-filled when you use "Apply to make this short" on a story card. You can also
+                    Pre-filled when you use &ldquo;Apply to make this short&rdquo; on a story card.
+                    You can also
                     <a href="./stories.html">browse stories</a> and apply from there.
                   </p>
                 </div>
@@ -123,12 +150,30 @@
                 <legend class="apply-form__legend" data-step="2">Contact</legend>
                 <div class="field--row">
                   <div class="field">
-                    <label class="apply-form__label" for="apply-name">Full name <abbr title="required">*</abbr></label>
-                    <input class="apply-form__input" type="text" id="apply-name" name="Name" required autocomplete="name" />
+                    <label class="apply-form__label" for="apply-name"
+                      >Full name <abbr title="required">*</abbr></label
+                    >
+                    <input
+                      class="apply-form__input"
+                      type="text"
+                      id="apply-name"
+                      name="Name"
+                      required
+                      autocomplete="name"
+                    />
                   </div>
                   <div class="field">
-                    <label class="apply-form__label" for="apply-email">Email <abbr title="required">*</abbr></label>
-                    <input class="apply-form__input" type="email" id="apply-email" name="email" required autocomplete="email" />
+                    <label class="apply-form__label" for="apply-email"
+                      >Email <abbr title="required">*</abbr></label
+                    >
+                    <input
+                      class="apply-form__input"
+                      type="email"
+                      id="apply-email"
+                      name="Email"
+                      required
+                      autocomplete="email"
+                    />
                   </div>
                 </div>
               </fieldset>
@@ -136,7 +181,9 @@
               <fieldset class="apply-form__fieldset">
                 <legend class="apply-form__legend" data-step="3">Résumé &amp; work</legend>
                 <div class="field">
-                  <label class="apply-form__label" for="apply-resume">Résumé / CV link <abbr title="required">*</abbr></label>
+                  <label class="apply-form__label" for="apply-resume"
+                    >Résumé / CV link <abbr title="required">*</abbr></label
+                  >
                   <input
                     class="apply-form__input"
                     type="url"
@@ -145,16 +192,35 @@
                     required
                     placeholder="https://… (Drive, Dropbox, portfolio PDF, LinkedIn PDF)"
                   />
-                  <p class="apply-form__hint">Link to a PDF or profile we can read without a login, if possible.</p>
+                  <p class="apply-form__hint">
+                    Link to a PDF or profile we can read without a login, if possible.
+                  </p>
                 </div>
                 <div class="field--row">
                   <div class="field">
-                    <label class="apply-form__label" for="apply-reel-primary">Primary reel or sample <abbr title="required">*</abbr></label>
-                    <input class="apply-form__input" type="url" id="apply-reel-primary" name="Reel primary URL" required placeholder="https://… (Vimeo, YouTube)" />
+                    <label class="apply-form__label" for="apply-reel-primary"
+                      >Primary reel or sample <abbr title="required">*</abbr></label
+                    >
+                    <input
+                      class="apply-form__input"
+                      type="url"
+                      id="apply-reel-primary"
+                      name="Reel primary URL"
+                      required
+                      placeholder="https://… (Vimeo, YouTube)"
+                    />
                   </div>
                   <div class="field">
-                    <label class="apply-form__label" for="apply-reel-secondary">Second sample (optional)</label>
-                    <input class="apply-form__input" type="url" id="apply-reel-secondary" name="Reel secondary URL" placeholder="https://…" />
+                    <label class="apply-form__label" for="apply-reel-secondary"
+                      >Second sample (optional)</label
+                    >
+                    <input
+                      class="apply-form__input"
+                      type="url"
+                      id="apply-reel-secondary"
+                      name="Reel secondary URL"
+                      placeholder="https://…"
+                    />
                   </div>
                 </div>
               </fieldset>
@@ -162,7 +228,9 @@
               <fieldset class="apply-form__fieldset">
                 <legend class="apply-form__legend" data-step="4">Your pitch</legend>
                 <div class="field">
-                  <label class="apply-form__label" for="apply-why">Why you're a strong fit for this short <abbr title="required">*</abbr></label>
+                  <label class="apply-form__label" for="apply-why"
+                    >Why you're a strong fit for this short <abbr title="required">*</abbr></label
+                  >
                   <textarea
                     class="apply-form__textarea"
                     id="apply-why"
@@ -173,7 +241,9 @@
                   ></textarea>
                 </div>
                 <div class="field">
-                  <label class="apply-form__label" for="apply-experience">Relevant directing / producing experience (optional)</label>
+                  <label class="apply-form__label" for="apply-experience"
+                    >Relevant directing / producing experience (optional)</label
+                  >
                   <textarea
                     class="apply-form__textarea"
                     id="apply-experience"
@@ -183,7 +253,9 @@
                   ></textarea>
                 </div>
                 <div class="field">
-                  <label class="apply-form__label" for="apply-extra">Anything else we should know (optional)</label>
+                  <label class="apply-form__label" for="apply-extra"
+                    >Anything else we should know (optional)</label
+                  >
                   <textarea
                     class="apply-form__textarea"
                     id="apply-extra"
@@ -195,13 +267,15 @@
               </fieldset>
 
               <p class="apply-form__disclaimer">
-                <strong>This is a mockup.</strong> The form is wired to
-                <a href="https://formsubmit.co" rel="noopener noreferrer">FormSubmit</a> as a demonstration
-                (<code>hello@aisafetystudios.com</code>) but there is no real program behind it — please don't submit
-                sensitive information. Replace the address in <code>apply.html</code> to make it your own.
+                <strong>This is a mockup.</strong> Submitting shows a sample confirmation and
+                <strong>sends nothing anywhere</strong> — the form isn't wired to any service.
+                Please don't enter real or sensitive information. To make this a working
+                application, point the form at your own backend in <code>apply.html</code>.
               </p>
 
-              <button class="btn btn--primary btn--lg btn--block" type="submit">Submit application</button>
+              <button class="btn btn--primary btn--lg btn--block" type="submit">
+                Submit application
+              </button>
             </form>
           </div>
 
@@ -219,10 +293,22 @@
             <div class="aside-card">
               <h2 class="aside-card__title">Good to know</h2>
               <dl class="aside-card__meta">
-                <div><dt>Grant range</dt><dd>$300–$5,000</dd></div>
-                <div><dt>Runtime</dt><dd>Under 5 min</dd></div>
-                <div><dt>Payment</dt><dd>Two installments</dd></div>
-                <div><dt>Ending</dt><dd>Credible defensive win</dd></div>
+                <div>
+                  <dt>Grant range</dt>
+                  <dd>$300–$5,000</dd>
+                </div>
+                <div>
+                  <dt>Runtime</dt>
+                  <dd>Under 5 min</dd>
+                </div>
+                <div>
+                  <dt>Payment</dt>
+                  <dd>Two installments</dd>
+                </div>
+                <div>
+                  <dt>Ending</dt>
+                  <dd>Credible defensive win</dd>
+                </div>
               </dl>
             </div>
           </aside>
@@ -235,12 +321,26 @@
         <div>
           <a class="brand" href="./index.html" aria-label="AI Safety Studios — home">
             <svg class="brand__mark" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <rect x="2.5" y="4.5" width="19" height="15" rx="2.5" stroke="currentColor" stroke-width="1.6" />
-              <path d="M8 4.5v15M16 4.5v15M2.5 9.5H8M16 9.5h5.5M2.5 14.5H8M16 14.5h5.5" stroke="currentColor" stroke-width="1.6" />
+              <rect
+                x="2.5"
+                y="4.5"
+                width="19"
+                height="15"
+                rx="2.5"
+                stroke="currentColor"
+                stroke-width="1.6"
+              />
+              <path
+                d="M8 4.5v15M16 4.5v15M2.5 9.5H8M16 9.5h5.5M2.5 14.5H8M16 14.5h5.5"
+                stroke="currentColor"
+                stroke-width="1.6"
+              />
             </svg>
             <span class="brand__name"><b>AI Safety</b> Studios</span>
           </a>
-          <p class="site-footer__tagline">Microbudget films that make AI risk feel real — and point toward defenses.</p>
+          <p class="site-footer__tagline">
+            Microbudget films that make AI risk feel real — and point toward defenses.
+          </p>
         </div>
         <nav class="footer-col" aria-label="Explore">
           <h2 class="footer-col__title">Explore</h2>
@@ -271,9 +371,13 @@
       <div class="site-footer__base">
         <div class="site-footer__base-inner">
           <p class="site-footer__mockup">
-            <span class="dot" aria-hidden="true"></span> Mockup — a non-functional design concept, not affiliated with any real organization.
+            <span class="dot" aria-hidden="true"></span> Mockup — a non-functional design concept,
+            not affiliated with any real organization.
           </p>
-          <p class="site-footer__copy">© <span data-year>2026</span> AI Safety Studios (fictional). Reference stills via Unsplash.</p>
+          <p class="site-footer__copy">
+            © <span data-year>2026</span> AI Safety Studios (fictional). Reference stills via
+            Unsplash.
+          </p>
         </div>
       </div>
     </footer>
