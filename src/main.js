@@ -82,8 +82,8 @@ function initNav() {
   window.matchMedia("(min-width: 769px)").addEventListener("change", close);
 }
 
-/* ---- Dismissible mockup notice ------------------------------------------- */
-const PROMO_KEY = "mockupNoticeDismissed";
+/* ---- Dismissible project-status notice ------------------------------------ */
+const PROMO_KEY = "projectNoticeDismissed";
 
 function initPromo() {
   const dismiss = document.querySelector("[data-promo-dismiss]");

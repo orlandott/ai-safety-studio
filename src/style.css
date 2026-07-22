@@ -170,7 +170,7 @@ a {
 }
 
 /* =========================================================================
-   Mockup notice banner
+   Project-status notice banner
    ========================================================================= */
 .promo {
   position: relative;
@@ -1170,6 +1170,12 @@ a {
   color: var(--on-dark-2);
 }
 
+.cta-band__text a {
+  color: var(--on-dark);
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+
 .cta-band__actions {
   display: flex;
   flex-wrap: wrap;
@@ -1255,7 +1261,7 @@ a {
   justify-content: space-between;
 }
 
-.site-footer__mockup {
+.site-footer__status {
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
@@ -1264,7 +1270,7 @@ a {
   color: var(--ink-2);
 }
 
-.site-footer__mockup .dot {
+.site-footer__status .dot {
   width: 7px;
   height: 7px;
   border-radius: 50%;
@@ -1308,6 +1314,11 @@ a {
 .page-hero__intro strong {
   color: var(--ink);
   font-weight: 600;
+}
+
+.page-hero__intro a {
+  color: var(--accent);
+  text-underline-offset: 2px;
 }
 
 .page-hero__intro em {
@@ -1764,6 +1775,11 @@ a {
   color: var(--ink);
 }
 
+.apply-form__disclaimer a {
+  color: var(--accent);
+  text-underline-offset: 2px;
+}
+
 .apply-form__disclaimer code {
   font-size: 0.74rem;
   padding: 0.1rem 0.3rem;
@@ -1771,7 +1787,7 @@ a {
   border-radius: 4px;
 }
 
-/* Mockup confirmation shown in place of the form after submit. */
+/* Preview confirmation shown in place of the form after submit. */
 .apply-success {
   padding: clamp(1.75rem, 4vw, 2.5rem);
   background: var(--surface);
@@ -1814,6 +1830,11 @@ a {
 
 .apply-success__lede strong {
   color: var(--ink);
+}
+
+.apply-success__lede a {
+  color: var(--accent);
+  text-underline-offset: 2px;
 }
 
 /* =========================================================================

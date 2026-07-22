@@ -1,15 +1,16 @@
 # AI Safety Studios
 
-> [!IMPORTANT]
-> **This is a design mockup — not a real organization.** "AI Safety Studios" is a
-> fictional film-collective concept used to demonstrate a website design. There is
-> no grant program, the application form submits nothing, and nothing on the site
-> is a genuine funding offer.
+> [!NOTE]
+> **Status: early-stage project.** This site is the public pitch for AI Safety
+> Studios — a microbudget film program we're working to get off the ground. The
+> grant program it describes is not yet funded or accepting applications: the
+> application form is a preview that transmits nothing, and nothing on the site
+> is a live funding offer yet.
 
-A small, static marketing site (three content pages) for a fictional microbudget
-film collective. It's built with [Vite](https://vitejs.dev/) and deployed to
-GitHub Pages. The theme: short films that make abstract AI risks concrete, then
-point toward real defenses.
+The pitch site for a proposed microbudget film collective: short films that make
+abstract AI risks concrete, then point toward real defenses. A small, static site
+(three content pages) built with [Vite](https://vitejs.dev/) and deployed to
+GitHub Pages.
 
 ## Pages
 
@@ -17,8 +18,8 @@ point toward real defenses.
 | ----------------- | --------------------------------------------------------------- |
 | `index.html`      | Home — hero, featured film, what the program offers, FAQ.       |
 | `stories.html`    | The development slate — 30 short-film concepts in 5 categories. |
-| `apply.html`      | The (illustrative) grant application form.                      |
-| `thanks.html`     | Confirmation shown after the form is "submitted".               |
+| `apply.html`      | Preview of the planned grant application form.                  |
+| `thanks.html`     | No-JS fallback confirmation for the form preview.               |
 | `public/404.html` | Self-contained not-found page served by GitHub Pages.           |
 
 ## Getting started
@@ -39,7 +40,7 @@ index.html, stories.html, apply.html, thanks.html   # page entry points
 src/
   style.css          # design system + all component styles (plain CSS)
   main.js            # shared behavior: reveal-on-scroll, nav, sticky header, notice
-  apply.js           # apply page: pre-fill concept, intercept submit (mockup)
+  apply.js           # apply page: pre-fill concept, intercept submit (preview)
   stories-data.js    # single source of truth for the 30 concepts
   fonts/             # self-hosted Inter + Fraunces (woff2, latin subset)
 scripts/
@@ -68,10 +69,11 @@ hook), and CI fails if the committed `stories.html` is out of date.
 
 ## The application form
 
-The form is a **mockup**: on submit it shows a sample confirmation in place of the
-form and **transmits nothing**. If JavaScript is disabled, it falls back to a plain
-navigation to `thanks.html`. To make it a working application, point the form at
-your own backend in `apply.html` and handle the submission server-side.
+Applications aren't open yet, so the form is a **preview**: on submit it shows a
+sample confirmation in place of the form and **transmits nothing**. If JavaScript
+is disabled, it falls back to a plain navigation to `thanks.html`. When the
+program launches, point the form at a real backend in `apply.html` and handle the
+submission server-side.
 
 ## Formatting & CI
 
