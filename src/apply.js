@@ -40,7 +40,7 @@ function initApplyDemo() {
     panel.innerHTML = `
       <span class="apply-success__badge">Preview</span>
       <h2 class="apply-success__title">Thanks${name ? ", " : ""}<span class="apply-success__name"></span>!</h2>
-      <p class="apply-success__lede">Applications aren't open yet, so <strong>nothing was submitted or sent anywhere</strong> — but once the program launches, this is where ${forLine}. Want to hear when applications open? Email <a href="mailto:hello@aisafetystudios.com">hello@aisafetystudios.com</a>.</p>
+      <p class="apply-success__lede">Applications aren't open yet, so <strong>nothing was submitted or sent anywhere</strong> — but once the program launches, this is where ${forLine}. Want to hear when applications open? Email <a href="mailto:contact@orlandotorres.org">contact@orlandotorres.org</a>.</p>
       <button class="btn btn--primary" type="button" data-apply-reset>Walk through it again</button>
     `;
 
