@@ -14,13 +14,13 @@ function initApplyForm() {
   if (slugInput) slugInput.value = concept;
 }
 
-/* ---- Mockup submit: confirm locally, transmit nothing -------------------- */
+/* ---- Preview submit: confirm locally, transmit nothing -------------------- */
 function initApplyDemo() {
   const form = document.querySelector(".apply-form");
   if (!form) return;
 
   form.addEventListener("submit", (event) => {
-    // This is a design concept — never send applicant data anywhere.
+    // Applications aren't open yet — never send applicant data anywhere.
     event.preventDefault();
 
     const data = new FormData(form);
@@ -34,14 +34,14 @@ function initApplyDemo() {
     panel.tabIndex = -1;
 
     const forLine = conceptTitle
-      ? `your application for <strong class="apply-success__concept"></strong> is complete`
-      : `your open-pitch application is complete`;
+      ? `your application for <strong class="apply-success__concept"></strong> would land`
+      : `your open pitch would land`;
 
     panel.innerHTML = `
-      <span class="apply-success__badge">Mockup</span>
+      <span class="apply-success__badge">Preview</span>
       <h2 class="apply-success__title">Thanks${name ? ", " : ""}<span class="apply-success__name"></span>!</h2>
-      <p class="apply-success__lede">This is a design concept, so ${forLine} — but <strong>nothing was submitted or sent anywhere</strong>. On a real site, this is where you'd get a confirmation and next steps.</p>
-      <button class="btn btn--primary" type="button" data-apply-reset>Start another application</button>
+      <p class="apply-success__lede">Applications aren't open yet, so <strong>nothing was submitted or sent anywhere</strong> — but once the program launches, this is where ${forLine}. Want to hear when applications open? Email <a href="mailto:hello@aisafetystudios.com">hello@aisafetystudios.com</a>.</p>
+      <button class="btn btn--primary" type="button" data-apply-reset>Walk through it again</button>
     `;
 
     // Assign untrusted user input as text, never as HTML.
