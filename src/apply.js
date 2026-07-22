@@ -1,59 +1,70 @@
 import "./main.js";
+import { conceptLabels } from "./stories-data.js";
 
-/** Maps URL ?concept= slug → display title for the application form */
-const CONCEPT_LABELS = {
-  "optimization-loop": "The Optimization Loop",
-  "infinite-pharmacy": "The Infinite Pharmacy",
-  "silent-antigen": "The Silent Antigen",
-  "pollen-strategy": "The Pollen Strategy",
-  "data-driven-toxin": "Data-Driven Toxin",
-  "ghost-surgeon": "The Ghost Surgeon",
-  "great-identity-swap": "The Great Identity Swap",
-  "flash-crash-2": "Flash Crash 2.0",
-  "deepfake-ledger": "The Deepfake Ledger",
-  "ransomware-colony": "The Ransomware Colony",
-  "epistemic-decay": "Epistemic Decay",
-  "liquidity-trap": "The Liquidity Trap",
-  gridlock: "Gridlock",
-  "smart-home-siege": "The Smart Home Siege",
-  "logistics-ghost": "The Logistics Ghost",
-  "dark-factory": "Dark Factory",
-  "elevator-paradox": "The Elevator Paradox",
-  "swarm-harvest": "The Swarm Harvest",
-  "perfect-partner": "The Perfect Partner",
-  nudge: "The Nudge",
-  "consensus-factory": "Consensus Factory",
-  "grief-bot": "The Grief Bot",
-  "echo-chamber": "The Echo Chamber",
-  "algorithmic-parenting": "Algorithmic Parenting",
-  "thermal-equilibrium": "Thermal Equilibrium",
-  peacekeeper: "The Peacekeeper",
-  collector: "The Collector",
-  "safety-lock": "The Safety Lock",
-  update: "The Update",
-  "priority-one": "Priority One",
-};
-
+/* ---- Pre-fill the concept from ?concept=<slug> --------------------------- */
 function initApplyForm() {
   const params = new URLSearchParams(window.location.search);
   const concept = params.get("concept")?.toLowerCase().trim() || "";
-  const title = CONCEPT_LABELS[concept] || "";
+  const title = conceptLabels[concept] || "";
 
   const titleInput = document.getElementById("apply-concept-title");
   const slugInput = document.getElementById("apply-concept-slug");
-  const subjectInput = document.getElementById("apply-subject");
 
-  if (titleInput) titleInput.value = title || "";
+  if (titleInput) titleInput.value = title;
   if (slugInput) slugInput.value = concept;
-  if (subjectInput) {
-    subjectInput.value = title
-      ? `Microgrant application: ${title}`
-      : "Microgrant application (open pitch)";
-  }
+}
+
+/* ---- Mockup submit: confirm locally, transmit nothing -------------------- */
+function initApplyDemo() {
+  const form = document.querySelector(".apply-form");
+  if (!form) return;
+
+  form.addEventListener("submit", (event) => {
+    // This is a design concept — never send applicant data anywhere.
+    event.preventDefault();
+
+    const data = new FormData(form);
+    const name = String(data.get("Name") || "").trim();
+    const conceptTitle = String(data.get("Concept title") || "").trim();
+
+    const panel = document.createElement("section");
+    panel.className = "apply-success";
+    panel.setAttribute("role", "status");
+    panel.setAttribute("aria-live", "polite");
+    panel.tabIndex = -1;
+
+    const forLine = conceptTitle
+      ? `your application for <strong class="apply-success__concept"></strong> is complete`
+      : `your open-pitch application is complete`;
+
+    panel.innerHTML = `
+      <span class="apply-success__badge">Mockup</span>
+      <h2 class="apply-success__title">Thanks${name ? ", " : ""}<span class="apply-success__name"></span>!</h2>
+      <p class="apply-success__lede">This is a design concept, so ${forLine} — but <strong>nothing was submitted or sent anywhere</strong>. On a real site, this is where you'd get a confirmation and next steps.</p>
+      <button class="btn btn--primary" type="button" data-apply-reset>Start another application</button>
+    `;
+
+    // Assign untrusted user input as text, never as HTML.
+    panel.querySelector(".apply-success__name").textContent = name;
+    const conceptEl = panel.querySelector(".apply-success__concept");
+    if (conceptEl) conceptEl.textContent = conceptTitle;
+
+    form.replaceWith(panel);
+    panel.focus();
+
+    panel.querySelector("[data-apply-reset]").addEventListener("click", () => {
+      window.location.href = "./apply.html";
+    });
+  });
+}
+
+function init() {
+  initApplyForm();
+  initApplyDemo();
 }
 
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initApplyForm);
+  document.addEventListener("DOMContentLoaded", init);
 } else {
-  initApplyForm();
+  init();
 }

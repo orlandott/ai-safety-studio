@@ -1,7 +1,42 @@
 /* =========================================================================
    AI Safety Studios — design system
-   A light, editorial, cinematic look. Plain CSS, no build step required.
+   A light, editorial, cinematic look.
    ========================================================================= */
+
+/* Self-hosted variable fonts (latin subset). Inter and Fraunces are both
+   licensed under the SIL Open Font License 1.1. */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("./fonts/inter-latin.woff2") format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("./fonts/fraunces-latin.woff2") format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  font-style: italic;
+  font-weight: 400 560;
+  font-display: swap;
+  src: url("./fonts/fraunces-italic-latin.woff2") format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 :root {
   /* Palette — warm paper light theme */
@@ -107,7 +142,11 @@ a {
   inset: 0;
   pointer-events: none;
   z-index: 1;
-  background: radial-gradient(ellipse 75% 60% at 50% 38%, transparent 55%, rgba(24, 24, 27, 0.03) 100%);
+  background: radial-gradient(
+    ellipse 75% 60% at 50% 38%,
+    transparent 55%,
+    rgba(24, 24, 27, 0.03) 100%
+  );
 }
 
 /* ----- Skip link ----- */
@@ -192,7 +231,9 @@ a {
   font-size: 1.25rem;
   line-height: 1;
   cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
 }
 
 .promo__dismiss:hover {
@@ -211,7 +252,10 @@ a {
   backdrop-filter: saturate(180%) blur(12px);
   -webkit-backdrop-filter: saturate(180%) blur(12px);
   border-bottom: 1px solid transparent;
-  transition: border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .site-header.is-scrolled {
@@ -270,7 +314,9 @@ a {
   font-size: 0.86rem;
   font-weight: 500;
   letter-spacing: 0.01em;
-  transition: color 0.2s ease, background 0.2s ease;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
 }
 
 .site-nav__link:hover {
@@ -313,12 +359,21 @@ a {
   height: 1.6px;
   background: var(--ink);
   border-radius: 2px;
-  transition: transform 0.25s ease, opacity 0.2s ease, top 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    opacity 0.2s ease,
+    top 0.25s ease;
 }
 
-.nav-toggle__bar:nth-child(1) { top: 0; }
-.nav-toggle__bar:nth-child(2) { top: 5px; }
-.nav-toggle__bar:nth-child(3) { top: 10px; }
+.nav-toggle__bar:nth-child(1) {
+  top: 0;
+}
+.nav-toggle__bar:nth-child(2) {
+  top: 5px;
+}
+.nav-toggle__bar:nth-child(3) {
+  top: 10px;
+}
 
 .nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(1) {
   top: 5px;
@@ -352,7 +407,10 @@ a {
     transform: translateY(-8px);
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease,
+      visibility 0.2s;
   }
 
   .site-nav.is-open {
@@ -392,8 +450,12 @@ a {
   text-decoration: none;
   cursor: pointer;
   white-space: nowrap;
-  transition: transform 0.15s ease, background 0.2s ease, color 0.2s ease,
-    border-color 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.15s ease,
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .btn:active {
@@ -499,6 +561,10 @@ a {
   padding-inline: 1.25rem;
 }
 
+.container--apply {
+  padding-bottom: clamp(3rem, 7vw, 5rem);
+}
+
 .section__head {
   max-width: var(--prose);
   margin: 0 0 clamp(2rem, 4vw, 3rem);
@@ -534,7 +600,8 @@ a {
 .reveal {
   opacity: 0;
   transform: translateY(18px);
-  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
     transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
   transition-delay: var(--reveal-delay, 0s);
 }
@@ -711,7 +778,10 @@ a {
   border: 1px solid var(--line);
   border-radius: var(--r-md);
   box-shadow: var(--shadow-sm);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .feature:hover {
@@ -862,7 +932,9 @@ a {
   min-height: 220px;
   object-fit: cover;
   filter: contrast(1.04) saturate(0.9) brightness(0.96);
-  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), filter 0.5s ease;
+  transition:
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.5s ease;
 }
 
 @media (min-width: 980px) {
@@ -880,7 +952,12 @@ a {
   position: absolute;
   inset: auto 0 0 0;
   padding: 3.5rem 1rem 1rem;
-  background: linear-gradient(to top, rgba(10, 10, 12, 0.9) 0%, rgba(10, 10, 12, 0.4) 55%, transparent 100%);
+  background: linear-gradient(
+    to top,
+    rgba(10, 10, 12, 0.9) 0%,
+    rgba(10, 10, 12, 0.4) 55%,
+    transparent 100%
+  );
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -961,6 +1038,7 @@ a {
    ========================================================================= */
 .faq__list {
   max-width: var(--prose);
+  margin-inline: auto;
 }
 
 .faq__item {
@@ -1003,7 +1081,9 @@ a {
   position: absolute;
   background: var(--ink-2);
   border-radius: 2px;
-  transition: transform 0.25s ease, opacity 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
 }
 
 .faq__icon::before {
@@ -1269,7 +1349,10 @@ a {
   text-decoration: none;
   font-size: 0.8rem;
   font-weight: 500;
-  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
 }
 
 .chip:hover {
@@ -1358,7 +1441,10 @@ a {
   border: 1px solid var(--line);
   border-radius: var(--r-md);
   box-shadow: var(--shadow-sm);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .story-card:hover {
@@ -1505,7 +1591,8 @@ a {
   height: 1.1rem;
   border-radius: 50%;
   background:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center / 0.7rem no-repeat,
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E")
+      center / 0.7rem no-repeat,
     var(--accent);
 }
 
@@ -1616,7 +1703,9 @@ a {
   background: var(--surface);
   border: 1px solid var(--line-2);
   border-radius: var(--r-sm);
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .apply-form__input::placeholder,
@@ -1660,14 +1749,6 @@ a {
   text-underline-offset: 2px;
 }
 
-.apply-form__honey {
-  position: absolute;
-  left: -9999px;
-  width: 1px;
-  height: 1px;
-  opacity: 0;
-}
-
 .apply-form__disclaimer {
   margin: 1.5rem 0;
   padding: 0.95rem 1.1rem;
@@ -1688,6 +1769,51 @@ a {
   padding: 0.1rem 0.3rem;
   background: rgba(24, 24, 27, 0.06);
   border-radius: 4px;
+}
+
+/* Mockup confirmation shown in place of the form after submit. */
+.apply-success {
+  padding: clamp(1.75rem, 4vw, 2.5rem);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.apply-success:focus {
+  outline: none;
+}
+
+.apply-success__badge {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(180, 69, 47, 0.1);
+  border-radius: 999px;
+}
+
+.apply-success__title {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.15;
+}
+
+.apply-success__lede {
+  margin: 0 0 1.5rem;
+  max-width: 46ch;
+  color: var(--ink-2);
+  line-height: 1.6;
+}
+
+.apply-success__lede strong {
+  color: var(--ink);
 }
 
 /* =========================================================================
